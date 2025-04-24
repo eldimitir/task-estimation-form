@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Estimation Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Estimation Form</h1>
+
+        <section class="analysis">
+            <h2>Analysis</h2>
+            <div class="form-group">
+                <label for="concept">Concept (hours):</label>
+                <input type="number" id="concept" name="concept" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="analysis">Analysis and Specification (hours):</label>
+                <input type="number" id="analysis" name="analysis" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="specification">FDD for the Developer (hours):</label>
+                <input type="number" id="specification" name="specification" value="0" step="0.5" class="form-control">
+            </div>
+        </section>
+
+        <section class="developer-time">
+            <h2>Developer Time</h2>
+            <div class="form-group">
+                <label for="programming">Programming (hours):</label>
+                <input type="number" id="programming" name="programming" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="internalTesting">Internal Testing (hours):</label>
+                <input type="number" id="internalTesting" name="internalTesting" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="configuration">Configuration (hours):</label>
+                <input type="number" id="configuration" name="configuration" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="solutionDocumentation">Solution Documentation (hours):</label>
+                <input type="number" id="solutionDocumentation" name="solutionDocumentation" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="objectManagement">Object Management (hours):</label>
+                <input type="number" id="objectManagement" name="objectManagement" value="0" step="0.5" class="form-control">
+            </div>
+        </section>
+
+        <section class="testing">
+            <h2>Testing</h2>
+            <div class="form-group">
+                <label for="codeQualityControl">Code Quality Control (hours):</label>
+                <input type="number" id="codeQualityControl" name="codeQualityControl" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="testingConfiguration">Testing and Configuration (Consultant) (hours):</label>
+                <input type="number" id="testingConfiguration" name="testingConfiguration" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="clientTestSupport">Client Test Support (Developer) (hours):</label>
+                <input type="number" id="clientTestSupport" name="clientTestSupport" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="clientAcceptanceTesting">Client Acceptance Testing (hours):</label>
+                <input type="number" id="clientAcceptanceTesting" name="clientAcceptanceTesting" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="training">Training (hours):</label>
+                <input type="number" id="training" name="training" value="0" step="0.5" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="userManual">User Manual (hours):</label>
+                <input type="number" id="userManual" name="userManual" value="0" step="0.5" class="form-control">
+            </div>
+        </section>
+
+        <section class="additional-costs">
+            <h2>Additional Costs</h2>
+            <div class="form-group">
+                <label for="releaseCost">Release Cost for each additional base (hours):</label>
+                <input type="number" id="releaseCost" name="releaseCost" value="0" step="0.5" class="form-control">
+            </div>
+        </section>
+
+        <section class="parameters">
+            <h2>Parameters</h2>
+            <div class="form-group">
+                <label for="margin">Margin (%):</label>
+                <input type="number" id="margin" name="margin" value="15" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="projectManagement">Project Management (%):</label>
+                <input type="number" id="projectManagement" name="projectManagement" value="20" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="hourlyRate">Hourly Rate (PLN):</label>
+                <input type="number" id="hourlyRate" name="hourlyRate" value="50" class="form-control">
+            </div>
+        </section>
+
+        <section class="results">
+            <h2>Results</h2>
+            <table id="resultsTable" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr title="Tooltip for Analysis">
+                        <td>Analysis</td>
+                        <td id="analysisResult">0</td>
+                    </tr>
+                    <tr title="Tooltip for Programming">
+                        <td>Programming</td>
+                        <td id="programmingResult">0</td>
+                    </tr>
+                    <tr title="Tooltip for Testing">
+                        <td>Testing</td>
+                        <td id="testingResult">0</td>
+                    </tr>
+                    <tr title="Tooltip for Project Management">
+                        <td>Project Management</td>
+                        <td id="projectManagementResult">0</td>
+                    </tr>
+                    <tr title="Tooltip for Total">
+                        <td>TOTAL</td>
+                        <td id="totalResult">0</td>
+                    </tr>
+                     <tr title="Tooltip for Release Cost">
+                        <td>Effort for Release on Additional Base</td>
+                        <td id="releaseCostResult">0</td>
+                    </tr>
+                    <tr title="Tooltip for Valuation">
+                        <td>Valuation in PLN</td>
+                        <td id="valuationResult">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="buttons">
+            <button id="copyToJira1" class="btn btn-primary">Copy to JIRA 1</button>
+            <button id="copyToJira2" class="btn btn-secondary">Copy to JIRA 2</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

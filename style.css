@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 95%; /* Wider container */
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 10px; /* Reduced gap for more compact layout */
+}
+
+h1 {
+    text-align: center;
+    color: #2e8b57; /* Sea green */
+    grid-column: 1 / -1; /* Span all columns */
+}
+
+section {
+    margin-bottom: 10px; /* Reduced margin */
+    padding: 10px; /* Reduced padding */
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+section h2 {
+    color: #4682b4; /* Steel blue */
+    margin-top: 0;
+    padding-bottom: 5px; /* Reduced padding */
+    border-bottom: 1px solid #ddd;
+    font-size: 1.2em; /* Smaller font size for heading */
+}
+
+.form-group {
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 2px; /* Reduced margin */
+    color: #555;
+    font-size: 0.8em; /* Smaller font size for label */
+}
+
+/* Section specific styles for more color */
+.analysis {
+    background-color: #e0ffff; /* Light cyan */
+}
+
+.developer-time {
+    background-color: #f0fff0; /* Honeydew */
+}
+
+.testing {
+    background-color: #fff0f5; /* Lavender blush */
+}
+
+.additional-costs {
+    background-color: #ffffe0; /* Light yellow */
+}
+
+.parameters {
+    background-color: #f5fffa; /* Mint cream */
+}
